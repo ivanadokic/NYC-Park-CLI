@@ -8,12 +8,12 @@ class Scraper #responsible for scraping
         doc = Nokogiri::HTML(html)
         array_of_parks = doc.css('div.park-search-item')
         array_of_parks.each do |park|
-            name = park.css('h3').text
-            location = park.css('p.park-search-location').text
-            more_details = park.css('p.more-left >a')[0].children[0].text
-            more_details_url = park.css('p.more-left >a')[0].attributes["href"].value
-            new_url = "https://www.nycgovparks.org" << more_details_url
-            Park.new(name, location, more_details, new_url)
+            p = Park.new
+            p.name = park.css('h3').text
+            p.location = park.css('p.park-search-location').text
+            p.url << park.css('p.more-left >a')[0].attributes["href"].value 
+        array_of_facilities = doc.css()
+    
             #css selector for the park name is h3
             #css selector for the park address is park p.park-search-location
         end

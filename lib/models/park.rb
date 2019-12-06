@@ -1,13 +1,11 @@
 class Park
   #responsible for initializing and saving parks
 
-attr_accessor :name, :location, :more_details, :more_details_url
+attr_accessor :name, :location, :url, :facilities
         @@all = []
-        def initialize(name, location, more_details, more_details_url)
-          @name = name
-          @location = location
-          @more_details = more_details
-          @more_details_url = more_details_url 
+        def initialize 
+          @url = "https://www.nycgovparks.org"
+          @facilities = []
           self.save
         end
       
@@ -18,4 +16,10 @@ attr_accessor :name, :location, :more_details, :more_details_url
         def save
           @@all << self
         end
+
+        def scrape_details
+          doc = Nokogiri::HTML(open(@url))
+        end
+
+
 end
