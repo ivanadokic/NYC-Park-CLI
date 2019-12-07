@@ -4,3 +4,4 @@ source "https://rubygems.org"
 gemspec
 require "pry"
 gem 'test_cli'
+gem "colorize"
