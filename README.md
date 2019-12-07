@@ -1,4 +1,8 @@
-HELLO
+NYC Park CLI
+
+Welcome to the NYC Park CLI! This CLI allows users to see a list of NYC parks. Each search will yield the name of the park and the location /address of each park. Users will also be able to dive deeper and request a more details about all the facilities of each specific park.
+
+
 # TestCli
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/test_cli`. To experiment with that code, run `bin/console` for an interactive prompt.
@@ -22,8 +26,7 @@ Or install it yourself as:
     $ gem install test_cli
 
 ## Usage
-
-TODO: Write usage instructions here
+Run the NYC Park CLI by entering 'ruby bin/start' in the terminal. The list of the NYC Parks will be displayed. Select a park number from the list to get more details on the park of your choosing. 
 
 ## Development
 
