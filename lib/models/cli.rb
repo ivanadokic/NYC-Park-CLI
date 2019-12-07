@@ -22,6 +22,8 @@ class CLI # CLI, responsible for user interactions, interfecing with command lin
       input = gets.chomp.to_i
     end
     puts "Location of the Park and more details:".colorize(:yellow)
+  
+
     display_park_details(input)
   end
 
@@ -41,7 +43,8 @@ class CLI # CLI, responsible for user interactions, interfecing with command lin
     #2. Take the user's input and turn it into an integer 
     #What does does the integer represent? The place the of the park in 
     
-    puts park.location
+    puts park.location.colorize(:green)
+    puts "Park facilities \u{1F3C0} \u{26BD} \u{1F3BE} \u{1F415} \u{26BE} \u{26F9} :"
     puts park.facilities
   end
 
@@ -49,7 +52,7 @@ class CLI # CLI, responsible for user interactions, interfecing with command lin
 
     puts "Those are NYC Parks names:".colorize(:green)
     Park.all.each.with_index (1) do |park, idx|
-      puts "#{idx}. #{park.name}"
+      puts "#{idx}. #{park.name}".colorize(:red)
     end
   end
 
@@ -60,8 +63,36 @@ class CLI # CLI, responsible for user interactions, interfecing with command lin
   #   end
   # end
   def goodbye
-    puts "THANK you for using the NYC Park CLI!".colorize(:green)
-   
-  end 
+    puts "THANK you for using the NYC Park CLI!
 
+                      `.--::::/:::--.`
+                `.:/++++//:::::://++++/-.
+            `-/+++:-.`            `.-:+++:.
+          `:++/:.          `           .:++/-`
+        `:++/.            -+`             -/++-
+        ./+/-             .++/`              -++/`
+      -++/`            -/+++++//             `/++.
+      -++:            `-+++++++++:-             /++.
+    `++/             `+++++++++++:             `/++`
+    /++`   `:-...``` .+++++++++++- ....:/:::    .++:
+    `++:     -+++++++++++++++++++++/+++++++/      /++`
+    .++-      /++++++++++++++++++++++++++++/      :++`
+    .++.     `++++++++++++++++++++++++++++/.      -++.
+    .++-      `/++++++++++++++++++++++++++-       :++`
+    `++/   `.-/++++++++++++++++++++++++++++/:-`   /+/
+    :++. .:++++++++++++++++++++++++++++++++/-.` -++-
+      /+/`  `-:/+++++++++:-:++//+++++++++/-.    .++/
+      `/+/`     /++++/:-`   /-   .-:/++++-     .++/`
+      `/++.    .-.`        -.        `...    -++/`
+        :++/`              -:              ./++-
+          ./++:.            -.            ./++:`
+            .:++/:.                   `.:+++:`
+              `-:+++/:-.``      ``.-:/+++:.
+                  .-:/++++++++++++++/:-`
+                      ``...--...``
+
+
+
+    ".colorize(:green)
+  end
 end
