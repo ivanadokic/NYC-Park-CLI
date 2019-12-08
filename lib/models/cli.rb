@@ -94,5 +94,21 @@ class CLI # CLI, responsible for user interactions, interfecing with command lin
 
 
     ".colorize(:green)
+    input = gets.chomp
+     until input == "exit"
+      puts "If you want to seacrch for a new Park choose 1-10"
+      input = gets.chomp.to_i
+      if valid_input?(input)
+        break
+      
+          else
+       input = "exit"
+      end
+    end 
+   
+    if input.class == Integer
+      display_park_names
+      ask_for_park_choice
+    end
   end
 end
