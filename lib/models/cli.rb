@@ -96,7 +96,7 @@ class CLI # CLI, responsible for user interactions, interfecing with command lin
     ".colorize(:green)
     input = gets.chomp
      until input == "exit"
-      puts "If you want to seacrch for a new Park choose 1-10"
+      puts "If you want to seacrch for a new Park choose 1-10, if not please type exit".colorize(:blue)
       input = gets.chomp.to_i
       if valid_input?(input)
         break
