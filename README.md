@@ -28,6 +28,9 @@ Or install it yourself as:
 ## Usage
 Run the NYC Park CLI by entering 'ruby bin/start' in the terminal. The list of the NYC Parks will be displayed. Select a park number from the list to get more details on the park of your choosing. 
 
+## Video Walkthrough
+For short video walkthrough please click here: https://vimeo.com/465495367
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
