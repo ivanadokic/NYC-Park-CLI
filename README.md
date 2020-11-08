@@ -2,6 +2,7 @@
 
 Welcome to the NYC Park CLI! This CLI allows users to see a list of NYC parks. Each search will yield the name of the park and the location /address of each park. Users will also be able to dive deeper and request a more details about all the facilities of each specific park.
 
+<a href="https://i.imgur.com/NITq24H.jpg"><img src="https://i.imgur.com/NITq24H.jpg" title="source: imgur.com" height=259/></a>
 
 # TestCli
 
